@@ -38,3 +38,8 @@ if correct_color != "XXXX":
 		else:
 			print ("Goed gedaan, je had " + str(attempts) + " beurten nodig om de code te raden.")
 		game = False
+
+if attempts >= 1 and attempts <6 and correct_color != "XXXX":
+		print ("Nieuwe ronde, nieuwe kansen: ")
+	elif attempts >= 6:
+		print ("Het is je niet gelukt! De code was: " + str(color_code))	
