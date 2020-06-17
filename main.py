@@ -23,3 +23,18 @@ while game:
 		if player_guess[i] not in colors:
 			print ("\nDeze kleur wordt niet in het spel gebruikt. Kijk bovenaan bij de instructies welke kleuren gebruikt worden.")
 			continue
+
+if correct_color != "XXXX":
+		for i in range(4):
+			if player_guess[i] == color_code[i]:
+				correct_color += "X"
+			if  player_guess[i] != color_code[i] and player_guess[i] in color_code:
+				guessed_color += "O"
+		print (correct_color +  guessed_color + "\n")		
+		
+	if correct_color == "XXXX":
+		if attempts == 1:
+			print ("First try! Lekker bezig!")
+		else:
+			print ("Goed gedaan, je had " + str(attempts) + " beurten nodig om de code te raden.")
+		game = False
