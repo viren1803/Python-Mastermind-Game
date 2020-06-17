@@ -43,3 +43,12 @@ if attempts >= 1 and attempts <6 and correct_color != "XXXX":
 		print ("Nieuwe ronde, nieuwe kansen: ")
 	elif attempts >= 6:
 		print ("Het is je niet gelukt! De code was: " + str(color_code))	
+
+while game == False:
+		finish_game = input("\nWil je nog een keer spelen? (J/N)?").upper()	
+		attempts = 0
+		if finish_game =="N":
+			print ("Bedankt voor het spelen, doei!")
+		elif finish_game == "J":
+			game = True
+			print ("Zeker weten? Oke dan.. Raad de code: ")
